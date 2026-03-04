@@ -1,0 +1,90 @@
+:root {
+  --neon-blue: #2563eb; /* Matches your progress bars */
+  --dark-bg: #0a1120;   /* Matches your background */
+}
+
+/* Bento Grid Layout */
+.bento-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  padding: 20px 0;
+}
+
+.bento-card {
+  background: rgba(37, 99, 235, 0.05);
+  border: 1px solid var(--neon-blue);
+  border-radius: 12px;
+  padding: 15px;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(37, 99, 235, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.bento-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 15px rgba(37, 99, 235, 0.3);
+}
+
+.bento-card .icon { font-size: 1.5rem; margin-bottom: 8px; }
+.bento-card .label { color: var(--neon-blue); font-size: 0.7rem; font-weight: bold; margin: 0; }
+.bento-card .value { color: #fff; font-size: 0.75rem; margin-top: 4px; font-family: sans-serif; }
+
+/* Timeline Styling */
+.timeline-title {
+  text-align: center;
+  color: var(--neon-blue);
+  font-size: 0.9rem;
+  letter-spacing: 2px;
+  margin-top: 30px;
+}
+
+.timeline {
+  position: relative;
+  max-width: 300px;
+  margin: 20px auto;
+  padding-left: 20px;
+}
+
+/* The Vertical Line */
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 7px;
+  top: 0;
+  width: 2px;
+  height: 100%;
+  background: var(--neon-blue);
+  box-shadow: 0 0 8px var(--neon-blue);
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 25px;
+  padding-left: 25px;
+}
+
+.dot {
+  position: absolute;
+  left: -18px;
+  top: 5px;
+  width: 10px;
+  height: 100%; /* Makes the dot look like it's part of the line */
+  width: 12px;
+  height: 12px;
+  background: var(--dark-bg);
+  border: 2px solid var(--neon-blue);
+  border-radius: 50%;
+  z-index: 2;
+}
+
+.timeline-item .content p { color: #ccc; font-size: 0.85rem; margin: 0; }
+.timeline-item .year { color: var(--neon-blue); font-size: 0.75rem; opacity: 0.8; }
+
+.bento-container img {
+  width: 100px;
+  height: 100px;
+}
+img{
+    filter: drop-shadow(0 10px 15px rgba(81, 169, 241, 0.856));
+}
